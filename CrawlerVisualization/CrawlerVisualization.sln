@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlerVisualizationUI", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlerVisualizationBusinessLogic", "CrawlerVisualizationBusinessLogic\CrawlerVisualizationBusinessLogic.csproj", "{3736A90E-FDB2-443F-988F-19871AC31326}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graphviz", "..\..\..\windows\graphviz.csproj", "{DECED886-4C60-47C7-BBB9-44A32EDBE62D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,12 +31,6 @@ Global
 		{3736A90E-FDB2-443F-988F-19871AC31326}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3736A90E-FDB2-443F-988F-19871AC31326}.Release|x86.ActiveCfg = Release|Any CPU
 		{3736A90E-FDB2-443F-988F-19871AC31326}.Release|x86.Build.0 = Release|Any CPU
-		{DECED886-4C60-47C7-BBB9-44A32EDBE62D}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{DECED886-4C60-47C7-BBB9-44A32EDBE62D}.Debug|x86.ActiveCfg = Debug|x86
-		{DECED886-4C60-47C7-BBB9-44A32EDBE62D}.Debug|x86.Build.0 = Debug|x86
-		{DECED886-4C60-47C7-BBB9-44A32EDBE62D}.Release|Any CPU.ActiveCfg = Release|x86
-		{DECED886-4C60-47C7-BBB9-44A32EDBE62D}.Release|x86.ActiveCfg = Release|x86
-		{DECED886-4C60-47C7-BBB9-44A32EDBE62D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

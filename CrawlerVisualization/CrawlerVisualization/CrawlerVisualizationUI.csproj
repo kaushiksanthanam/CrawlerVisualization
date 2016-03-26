@@ -119,7 +119,9 @@
     <Content Include="GraphRef\Microsoft.Msagl.dll" />
     <Content Include="GraphRef\Microsoft.Msagl.Drawing.dll" />
     <Content Include="GraphRef\Microsoft.Msagl.GraphViewerGdi.dll" />
-    <Content Include="PeerCrawl\PeerCrawl_v5.1.jar" />
+    <Content Include="PeerCrawl\PeerCrawl_v5.1.jar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Windows.Forms;
+using Microsoft.Msagl.Drawing;
 
 namespace CrawlerVisualizationUI
 {

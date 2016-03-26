@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.openPeerCrawlButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // openPeerCrawlButton
+            // 
+            this.openPeerCrawlButton.Location = new System.Drawing.Point(13, 13);
+            this.openPeerCrawlButton.Name = "openPeerCrawlButton";
+            this.openPeerCrawlButton.Size = new System.Drawing.Size(258, 51);
+            this.openPeerCrawlButton.TabIndex = 0;
+            this.openPeerCrawlButton.Text = "Open Peer Crawl";
+            this.openPeerCrawlButton.UseVisualStyleBackColor = true;
+            this.openPeerCrawlButton.Click += new System.EventHandler(this.openPeerCrawlButton_Click);
+            // 
+            // MainUI
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(283, 151);
+            this.Controls.Add(this.openPeerCrawlButton);
+            this.Name = "MainUI";
+            this.Text = "Crawler Visualization";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button openPeerCrawlButton;
     }
 }
 

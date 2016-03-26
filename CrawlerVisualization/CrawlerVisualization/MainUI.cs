@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace CrawlerVisualizationUI
 {
@@ -17,6 +18,17 @@ namespace CrawlerVisualizationUI
             //viewer.Graph = g;
             //this.Controls.Add(viewer);
 
+        }
+
+        /// <summary>
+        /// Method to launch the PeerCrawl Process from inside our application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void openPeerCrawlButton_Click(object sender, System.EventArgs e)
+        {
+            // This is the command you have to run.
+            // java - Xmx1024m - jar PeerCrawl_v5.1.jar
         }
     }
 }

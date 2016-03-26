@@ -30,7 +30,7 @@ namespace CrawlerVisualizationUI
         {
             // This is the command you have to run.
             // java - Xmx1024m - jar PeerCrawl_v5.1.jar
-            System.Diagnostics.Process.Start("java - Xmx1024m - jar PeerCrawl_v5.1.jar");
+            System.Diagnostics.Process.Start("java - Xmx1024m - jar PeerCrawl_v5.1.jar")
         }
     }
 }

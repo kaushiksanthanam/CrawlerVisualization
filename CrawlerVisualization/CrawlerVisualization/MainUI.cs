@@ -32,10 +32,12 @@ namespace CrawlerVisualizationUI
         {
             // This is the command you have to run.
             // java - Xmx1024m - jar PeerCrawl_v5.1.jar
-            string cmdExecute = "java - Xmx1024m - jar " + Application.StartupPath + "\\PeerCrawl\\PeerCrawl_v5.1.jar";
-            bool val = File.Exists(Application.StartupPath + "\\PeerCrawl\\PeerCrawl_v5.1.jar");
-            Console.WriteLine(val);
-            System.Diagnostics.Process.Start(cmdExecute);
+            var commandLineArgs = "-Xmx1024m -jar \"" + Application.StartupPath + "\\PeerCrawl\\PeerCrawl_v5.1.jar\"";
+
+            Process proc = new Process();
+            proc.StartInfo.FileName = "java.exe";
+            proc.StartInfo.Arguments = commandLineArgs;
+            proc.Start();
         }
     }
 }

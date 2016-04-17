@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using Microsoft.Msagl.Drawing;
 using System;
 using System.IO;
+using CrawlerVisualizationBusinessLogic;
 
 namespace CrawlerVisualizationUI
 {
@@ -31,19 +32,7 @@ namespace CrawlerVisualizationUI
         private void openPeerCrawlButton_Click(object sender, System.EventArgs e)
         {
             //Delete earlier peer crawled folders
-            var applicationStartup = Application.StartupPath;
-            if (Directory.Exists(applicationStartup + "\\saved"))
-            {
-                Directory.Delete(applicationStartup + "\\saved", true);
-            }
-            if (Directory.Exists(applicationStartup + "\\cached"))
-            {
-                Directory.Delete(applicationStartup + "\\cached", true);
-            }
-            if (Directory.Exists(applicationStartup + "\\stats"))
-            {
-                Directory.Delete(applicationStartup + "\\stats", true);
-            }
+            int returnCode = FolderOperations.DeletePreviousCrawledFiles(Application.StartupPath);
 
             // This is the command you have to run.
             // java - Xmx1024m - jar PeerCrawl_v5.1.jar

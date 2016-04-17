@@ -30,6 +30,21 @@ namespace CrawlerVisualizationUI
         /// <param name="e"></param>
         private void openPeerCrawlButton_Click(object sender, System.EventArgs e)
         {
+            //Delete earlier peer crawled folders
+            var applicationStartup = Application.StartupPath;
+            if (Directory.Exists(applicationStartup + "\\saved"))
+            {
+                Directory.Delete(applicationStartup + "\\saved", true);
+            }
+            if (Directory.Exists(applicationStartup + "\\cached"))
+            {
+                Directory.Delete(applicationStartup + "\\cached", true);
+            }
+            if (Directory.Exists(applicationStartup + "\\stats"))
+            {
+                Directory.Delete(applicationStartup + "\\stats", true);
+            }
+
             // This is the command you have to run.
             // java - Xmx1024m - jar PeerCrawl_v5.1.jar
             var commandLineArgs = "-Xmx1024m -jar \"" + Application.StartupPath + "\\PeerCrawl\\PeerCrawl_v5.1.jar\"";
@@ -38,6 +53,11 @@ namespace CrawlerVisualizationUI
             proc.StartInfo.FileName = "java.exe";
             proc.StartInfo.Arguments = commandLineArgs;
             proc.Start();
+        }
+
+        private void showVisualizationButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

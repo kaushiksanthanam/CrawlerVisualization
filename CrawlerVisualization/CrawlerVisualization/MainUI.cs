@@ -4,6 +4,8 @@ using Microsoft.Msagl.Drawing;
 using System;
 using System.IO;
 using CrawlerVisualizationBusinessLogic;
+using System.Collections.Generic;
+using CrawlerVisualization;
 
 namespace CrawlerVisualizationUI
 {
@@ -46,7 +48,10 @@ namespace CrawlerVisualizationUI
 
         private void showVisualizationButton_Click(object sender, EventArgs e)
         {
-
+            HostGraphForm newHost = new HostGraphForm(Application.StartupPath);
+            newHost.ShowDialog();
         }
+
+
     }
 }

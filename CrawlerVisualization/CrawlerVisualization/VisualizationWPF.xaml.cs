@@ -97,29 +97,6 @@ namespace CrawlerVisualization
 
         }
 
-        private void SetupVertices()
-        {
-            //Random Rand = new Random();
-
-
-            ////Create and add vertices using some DataSource for ID's
-            //for (int i = 1; i <= 100; i++)
-            //{
-            //    graph.AddVertex(new DataVertex() { ID = i, Text = i.ToString() });
-            //}
-
-            //var vlist = graph.Vertices.ToList();
-            ////Generate random edges for the vertices
-            //foreach (var item in vlist)
-            //{
-            //    if (Rand.Next(0, 50) > 25) continue;
-            //    var vertex2 = vlist[Rand.Next(0, graph.VertexCount - 1)];
-            //    graph.AddEdge(new DataEdge(item, vertex2, Rand.Next(1, 50))
-            //    { Text = string.Format("{0} -> {1}", item, vertex2) });
-            //}
-
-            
-        }
 
         private void SetupLayouts()
         {
@@ -148,12 +125,12 @@ namespace CrawlerVisualization
             //Setup optional params
             LogicCore.DefaultOverlapRemovalAlgorithmParams =
                               LogicCore.AlgorithmFactory.CreateOverlapRemovalParameters(GraphX.PCL.Common.Enums.OverlapRemovalAlgorithmTypeEnum.FSA);
-            ((OverlapRemovalParameters)LogicCore.DefaultOverlapRemovalAlgorithmParams).HorizontalGap = 50;
-            ((OverlapRemovalParameters)LogicCore.DefaultOverlapRemovalAlgorithmParams).VerticalGap = 50;
+            ((OverlapRemovalParameters)LogicCore.DefaultOverlapRemovalAlgorithmParams).HorizontalGap = 40;
+            ((OverlapRemovalParameters)LogicCore.DefaultOverlapRemovalAlgorithmParams).VerticalGap = 40;
 
             //This property sets edge routing algorithm that is used to build route paths according to algorithm logic.
             //For ex., SimpleER algorithm will try to set edge paths around vertices so no edge will intersect any vertex.
-            LogicCore.DefaultEdgeRoutingAlgorithm = GraphX.PCL.Common.Enums.EdgeRoutingAlgorithmTypeEnum.SimpleER;
+            LogicCore.DefaultEdgeRoutingAlgorithm = GraphX.PCL.Common.Enums.EdgeRoutingAlgorithmTypeEnum.Bundling;
 
             //This property sets async algorithms computation so methods like: Area.RelayoutGraph() and Area.GenerateGraph()
             //will run async with the UI thread. Completion of the specified methods can be catched by corresponding events:

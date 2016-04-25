@@ -30,6 +30,7 @@
         {
             this.openPeerCrawlButton = new System.Windows.Forms.Button();
             this.showVisualizationButton = new System.Windows.Forms.Button();
+            this.showCrawlStatisticsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openPeerCrawlButton
@@ -44,19 +45,30 @@
             // 
             // showVisualizationButton
             // 
-            this.showVisualizationButton.Location = new System.Drawing.Point(13, 87);
+            this.showVisualizationButton.Location = new System.Drawing.Point(13, 203);
             this.showVisualizationButton.Name = "showVisualizationButton";
             this.showVisualizationButton.Size = new System.Drawing.Size(258, 52);
             this.showVisualizationButton.TabIndex = 1;
-            this.showVisualizationButton.Text = "Show Visualization";
+            this.showVisualizationButton.Text = "Show Crawl Visualization";
             this.showVisualizationButton.UseVisualStyleBackColor = true;
             this.showVisualizationButton.Click += new System.EventHandler(this.showVisualizationButton_Click);
+            // 
+            // showCrawlStatisticsButton
+            // 
+            this.showCrawlStatisticsButton.Location = new System.Drawing.Point(13, 128);
+            this.showCrawlStatisticsButton.Name = "showCrawlStatisticsButton";
+            this.showCrawlStatisticsButton.Size = new System.Drawing.Size(258, 52);
+            this.showCrawlStatisticsButton.TabIndex = 2;
+            this.showCrawlStatisticsButton.Text = "Show Crawl HTTP Statistics";
+            this.showCrawlStatisticsButton.UseVisualStyleBackColor = true;
+            this.showCrawlStatisticsButton.Click += new System.EventHandler(this.showCrawlStatisticsButton_Click);
             // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 151);
+            this.ClientSize = new System.Drawing.Size(281, 279);
+            this.Controls.Add(this.showCrawlStatisticsButton);
             this.Controls.Add(this.showVisualizationButton);
             this.Controls.Add(this.openPeerCrawlButton);
             this.Name = "MainUI";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button openPeerCrawlButton;
         private System.Windows.Forms.Button showVisualizationButton;
+        private System.Windows.Forms.Button showCrawlStatisticsButton;
     }
 }
 

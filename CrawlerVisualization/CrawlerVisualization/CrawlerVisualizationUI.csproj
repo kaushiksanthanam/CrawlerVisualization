@@ -85,6 +85,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -110,6 +111,18 @@
     <Compile Include="HostGraphForm.Designer.cs">
       <DependentUpon>HostGraphForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HttpDataGraphControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HttpDataGraphControl.Designer.cs">
+      <DependentUpon>HttpDataGraphControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HttpStatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HttpStatsForm.Designer.cs">
+      <DependentUpon>HttpStatsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +136,12 @@
     </Compile>
     <EmbeddedResource Include="HostGraphForm.resx">
       <DependentUpon>HostGraphForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HttpDataGraphControl.resx">
+      <DependentUpon>HttpDataGraphControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HttpStatsForm.resx">
+      <DependentUpon>HttpStatsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI.resx">
       <DependentUpon>MainUI.cs</DependentUpon>

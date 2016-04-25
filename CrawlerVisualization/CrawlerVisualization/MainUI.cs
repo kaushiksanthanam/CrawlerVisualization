@@ -52,6 +52,47 @@ namespace CrawlerVisualizationUI
             newHost.ShowDialog();
         }
 
+        private void showCrawlStatisticsButton_Click(object sender, EventArgs e)
+        {
 
+            HttpData newHttpData = new HttpData();
+            int lineNo = -1;
+            string[] linesInFile = File.ReadAllLines(Application.StartupPath + "\\stats\\http_data.csv");
+            foreach(string line in linesInFile)
+            {
+                var columns = line.Split(',');
+                lineNo++;
+                if (lineNo == 0) continue;
+
+                newHttpData.totalContentSize.Add(long.Parse(columns[1]));
+                newHttpData.totalURLDropped.Add(long.Parse(columns[2]));
+                newHttpData.totalURLDuplicated.Add(long.Parse(columns[3]));
+                newHttpData.numberofRobots.Add(long.Parse(columns[4]));
+                newHttpData.exception200.Add(long.Parse(columns[5]));
+                newHttpData.exception404.Add(long.Parse(columns[6]));
+                newHttpData.exception302.Add(long.Parse(columns[7]));
+                newHttpData.exception301.Add(long.Parse(columns[8]));
+                newHttpData.exception403.Add(long.Parse(columns[9]));
+                newHttpData.exception401.Add(long.Parse(columns[10]));
+                newHttpData.exception500.Add(long.Parse(columns[11]));
+                newHttpData.exception406.Add(long.Parse(columns[12]));
+                newHttpData.exception400.Add(long.Parse(columns[13]));
+                newHttpData.exceptionOther.Add(long.Parse(columns[14]));
+                newHttpData.textHTML.Add(long.Parse(columns[15]));
+                newHttpData.imageGIF.Add(long.Parse(columns[16]));
+                newHttpData.imageJpeg.Add(long.Parse(columns[17]));
+                newHttpData.textPlain.Add(long.Parse(columns[18]));
+                newHttpData.applicationsPDF.Add(long.Parse(columns[19]));
+                newHttpData.audio.Add(long.Parse(columns[20]));
+                newHttpData.zip.Add(long.Parse(columns[21]));
+                newHttpData.postScript.Add(long.Parse(columns[22]));
+                newHttpData.otherM.Add(long.Parse(columns[23]));
+
+            }
+
+            HttpStatsForm newForm = new HttpStatsForm(newHttpData);
+            newForm.Show();
+
+        }
     }
 }

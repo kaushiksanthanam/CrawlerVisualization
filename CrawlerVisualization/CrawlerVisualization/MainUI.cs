@@ -94,5 +94,26 @@ namespace CrawlerVisualizationUI
             newForm.Show();
 
         }
+
+        private void showURLStatsButton_Click(object sender, EventArgs e)
+        {
+            SecondData secondData = new SecondData();
+
+            int lineNo = -1;
+            string[] linesInFile = File.ReadAllLines(Application.StartupPath + "\\stats\\second_data.csv");
+            foreach (string line in linesInFile)
+            {
+                var columns = line.Split(',');
+                lineNo++;
+                if (lineNo == 0) continue;
+
+                secondData.UrlsCrawledPerSec.Add(long.Parse(columns[1]));
+                secondData.UrlsAdddedPerSec.Add(long.Parse(columns[2]));
+                secondData.UrlsSeenPerSec.Add(long.Parse(columns[3]));
+            }
+            SecondStatsForm newForm = new SecondStatsForm(secondData);
+            newForm.Show();
+        }
+
     }
 }

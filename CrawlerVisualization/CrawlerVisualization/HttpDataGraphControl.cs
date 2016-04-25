@@ -28,7 +28,29 @@ namespace CrawlerVisualization
                 displayChart.Series[chartName].Points.AddXY(xValue, point);
                 xValue++;
             }
-            this.Refresh();
+            Refresh();
+        }
+
+        public void Plot2Series(List<long> series1Points, List<long> series2Points, string series1Name, string series2Name)
+        {
+            displayChart.Series.Clear();
+            displayChart.Series.Add(series1Name);
+            long xValue = 1;
+            displayChart.Series[series1Name].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            foreach (long point in series1Points)
+            {
+                displayChart.Series[series1Name].Points.AddXY(xValue, point);
+                xValue++;
+            }
+            xValue = 1;
+            displayChart.Series.Add(series2Name);
+            displayChart.Series[series2Name].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            foreach(long point in series2Points)
+            {
+                displayChart.Series[series2Name].Points.AddXY(xValue, point);
+                xValue++;
+            }
+            Refresh();
         }
 
     }

@@ -130,7 +130,7 @@ namespace CrawlerVisualization
 
             //This property sets edge routing algorithm that is used to build route paths according to algorithm logic.
             //For ex., SimpleER algorithm will try to set edge paths around vertices so no edge will intersect any vertex.
-            LogicCore.DefaultEdgeRoutingAlgorithm = GraphX.PCL.Common.Enums.EdgeRoutingAlgorithmTypeEnum.Bundling;
+            LogicCore.DefaultEdgeRoutingAlgorithm = GraphX.PCL.Common.Enums.EdgeRoutingAlgorithmTypeEnum.SimpleER;
 
             //This property sets async algorithms computation so methods like: Area.RelayoutGraph() and Area.GenerateGraph()
             //will run async with the UI thread. Completion of the specified methods can be catched by corresponding events:
